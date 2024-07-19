@@ -1,5 +1,5 @@
 env: production
-baseURL: https://example.org/
+baseURL: https://univmajorwiki.pages.dev/
 languageCode: ko-kr
 title: 전공WIKI
 theme: ["PaperMod"]
