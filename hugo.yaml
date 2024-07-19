@@ -1,0 +1,35 @@
+env: production
+baseURL: https://example.org/
+languageCode: ko-kr
+title: 전공WIKI
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: archives
+      name: 전공목록
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: 찾기
+      url: /search/
+      weight: 20
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+params:
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  comments: true
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+  cover:
+    hiddenInList: true
