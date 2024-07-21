@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-22T10:43:49+12:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</loc>
+    <lastmod>2024-07-22T10:43:49+12:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-22T10:43:49+12:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/</loc>
     <lastmod>2024-07-21T00:00:00+00:00</lastmod>

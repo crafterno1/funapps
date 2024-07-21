@@ -6,8 +6,17 @@
     <description>Recent content on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2024 10:43:49 +1200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python으로 첫 AI 프로그램 작성하기: 기본 코드 예제</title>
+      <link>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</link>
+      <pubDate>Mon, 22 Jul 2024 10:43:49 +1200</pubDate>
+      <guid>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</guid>
+      <description>인공지능(AI)은 현대 기술의 핵심 중 하나로, 다양한 분야에서 그 활용이 점점 더 늘어나고 있습니다. 이번 포스트에서는 Python을 사용하여 첫번째 AI 프로그램을 작성하는 방법을 소개할 예정입니다. 초보자도 쉽게 따라할 수 있는 기본 코드 예제를 통해서 AI의 기초를 익혀보시길 바래요~
+Python 환경 설정 먼저, AI 프로그램을 작성하기 위한 Python 환경을 설정해야 합니다. Python을 설치하고 필요한 라이브러리를 설치하는 방법을 알아보시죠.
+Python 설치 Python 공식 웹사이트에서 최신 버전을 다운로드하여 설치합니다. 설치가 완료되면 터미널(또는 명령 프롬프트)을 열어 Python이 제대로 설치되었는지를 확인합니다.</description>
+    </item>
     <item>
       <title>초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼</title>
       <link>http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/</link>

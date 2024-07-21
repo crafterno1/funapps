@@ -1,7 +1,8 @@
 ---
 title: "Python으로 첫 AI 프로그램 작성하기: 기본 코드 예제"
 keywords: ["AI 프로그램", "Python AI", "기본 코드 예제", "인공지능 초보자"]
-date: "2024-07-22"
+date: "2024-07-22T10:43:49+12:00"
+draft: false
 cover:
   image: "/images/ai2.webp"
   alt: "AI Python Learning"
