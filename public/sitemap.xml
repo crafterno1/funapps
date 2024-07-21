@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://funapps.pages.dev/categories/</loc>
+    <loc>https://funapps.site/categories/</loc>
   </url><url>
-    <loc>https://funapps.pages.dev/tags/</loc>
+    <loc>https://funapps.site/tags/</loc>
   </url><url>
-    <loc>https://funapps.pages.dev/search/</loc>
+    <loc>https://funapps.site/search/</loc>
   </url><url>
-    <loc>https://funapps.pages.dev/archives/</loc>
+    <loc>https://funapps.site/archives/</loc>
   </url><url>
-    <loc>https://funapps.pages.dev/</loc>
+    <loc>https://funapps.site/</loc>
   </url>
 </urlset>

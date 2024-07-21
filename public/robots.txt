@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://funapps.site/sitemap.xml
