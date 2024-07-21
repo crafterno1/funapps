@@ -1,5 +1,5 @@
 env: production
-baseURL: https://funapps-46i.pages.dev/
+baseURL: https://funapps.site/
 languageCode: ko-kr
 title: 펀앱스
 theme: ["PaperMod"]
