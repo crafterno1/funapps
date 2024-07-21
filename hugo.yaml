@@ -1,4 +1,5 @@
 env: production
+enableRobotsTXT: true
 baseURL: https://funapps.site/
 languageCode: ko-kr
 title: 펀앱스
