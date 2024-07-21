@@ -1,5 +1,5 @@
 ---
-title: "전공목록"
+title: "아카이브"
 layout: "archives"
 url: "/archives/"
 summary: archives

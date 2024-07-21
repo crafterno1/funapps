@@ -2,21 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-18T00:00:00+00:00</lastmod>
+    <loc>https://funapps.pages.dev/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/business-administration/</loc>
-    <lastmod>2024-07-18T00:00:00+00:00</lastmod>
+    <loc>https://funapps.pages.dev/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-18T00:00:00+00:00</lastmod>
+    <loc>https://funapps.pages.dev/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://funapps.pages.dev/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://funapps.pages.dev/</loc>
   </url>
 </urlset>

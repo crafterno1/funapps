@@ -1,17 +1,17 @@
 env: production
-baseURL: https://univmajorwiki.pages.dev/
+baseURL: https://funapps.pages.dev/
 languageCode: ko-kr
-title: 전공WIKI
+title: 펀앱스
 theme: ["PaperMod"]
 
 menu:
-  main:
+  main:    
     - identifier: archives
-      name: 전공목록
+      name: 아카이브
       url: /archives/
       weight: 10
     - identifier: search
-      name: 찾기
+      name: 검색
       url: /search/
       weight: 20
 

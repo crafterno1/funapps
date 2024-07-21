@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>전공WIKI</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on 전공WIKI</description>
+    <title>펀앱스</title>
+    <link>https://funapps.pages.dev/</link>
+    <description>Recent content on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 18 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>경영학과 - CEO가 되고 싶다면 여기에 주목하세요!</title>
-      <link>http://localhost:1313/posts/business-administration/</link>
-      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/business-administration/</guid>
-      <description>전공 소개 및 학문 분야 경영학과는 조직의 목표를 달성하기 위해 자원(인적, 물적, 재정적 자원)을 효율적으로 관리하고 운영하는 방법을 연구하는 학문입니다. 경영학은 기업의 경영 활동을 분석하고 개선하는 것을 목표로 하며, 이를 통해 조직의 성과를 극대화하는 데 중점을 둡니다. 경영학은 크게 마케팅, 재무, 인사, 운영 관리, 전략 경영 등으로 나눌 수 있으며, 각 분야는 서로 밀접하게 연관되어 있습니다.
-마케팅: 소비자의 요구와 욕구를 충족시키기 위해 제품이나 서비스를 기획하고 홍보하는 과정을 다룹니다. 재무: 기업의 자본 조달, 투자, 자금 관리 등을 포함하며, 기업의 재정 상태를 분석하고 개선하는 방법을 연구합니다.</description>
-    </item>
+    <atom:link href="https://funapps.pages.dev/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

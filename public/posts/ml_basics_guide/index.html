@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>머신러닝 기초: 초보자를 위한 이해하기 쉬운 가이드 | 전공WIKI</title>
+<meta name="keywords" content="머신러닝, 기초, 초보자 가이드, 알고리즘, 데이터 사이언스">
+<meta name="description" content="머신러닝의 기본 개념과 작동 원리를 초보자도 쉽게 이해할 수 있도록 설명합니다. 머신러닝의 주요 알고리즘과 실제 사례를 통해 학습해보세요.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/ml_basics_guide/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="sha256-VEBaQQeWSQvIdKthgfrJtnV1PMK5E3XY&#43;IJWZFnspCg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ml_basics_guide/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="전공WIKI (Alt + H)">전공WIKI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="전공목록">
+                    <span>전공목록</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="찾기 (Alt &#43; /)" accesskey=/>
+                    <span>찾기</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      머신러닝 기초: 초보자를 위한 이해하기 쉬운 가이드
+    </h1>
+    <div class="post-description">
+      머신러닝의 기본 개념과 작동 원리를 초보자도 쉽게 이해할 수 있도록 설명합니다. 머신러닝의 주요 알고리즘과 실제 사례를 통해 학습해보세요.
+    </div>
+    <div class="post-meta"><span title='2024-07-20 00:00:00 +0000 UTC'>July 20, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="머신러닝-기초-초보자를-위한-이해하기-쉬운-가이드">머신러닝 기초: 초보자를 위한 이해하기 쉬운 가이드<a hidden class="anchor" aria-hidden="true" href="#머신러닝-기초-초보자를-위한-이해하기-쉬운-가이드">#</a></h1>
+<h2 id="서론">서론<a hidden class="anchor" aria-hidden="true" href="#서론">#</a></h2>
+<p>머신러닝은 인공지능의 한 분야로, 데이터를 분석하고 패턴을 인식하여 스스로 학습하는 기술입니다. 이번 글에서는 머신러닝의 기본 개념과 작동 원리를 초보자도 쉽게 이해할 수 있도록 설명하겠습니다. 또한, 머신러닝의 주요 알고리즘과 실제 사례를 통해 어떻게 활용되는지 알아보겠습니다.</p>
+<h2 id="머신러닝의-정의">머신러닝의 정의<a hidden class="anchor" aria-hidden="true" href="#머신러닝의-정의">#</a></h2>
+<p>머신러닝은 컴퓨터가 명시적인 프로그래밍 없이 데이터를 통해 학습하고 개선할 수 있도록 하는 기술입니다. 이는 다양한 알고리즘과 모델을 사용하여 데이터를 분석하고 예측하는 데 사용됩니다.</p>
+<h2 id="머신러닝의-종류">머신러닝의 종류<a hidden class="anchor" aria-hidden="true" href="#머신러닝의-종류">#</a></h2>
+<h3 id="1-지도-학습">1. 지도 학습<a hidden class="anchor" aria-hidden="true" href="#1-지도-학습">#</a></h3>
+<p>지도 학습은 정답이 있는 데이터를 사용하여 모델을 학습시키는 방법입니다. 예를 들어, 이메일의 스팸 여부를 판단하는 모델은 스팸과 스팸이 아닌 이메일 데이터를 학습하여 새로운 이메일을 분류합니다.</p>
+<h3 id="2-비지도-학습">2. 비지도 학습<a hidden class="anchor" aria-hidden="true" href="#2-비지도-학습">#</a></h3>
+<p>비지도 학습은 정답이 없는 데이터를 사용하여 패턴을 찾는 방법입니다. 예를 들어, 고객 데이터를 분석하여 비슷한 특성을 가진 고객 군집을 찾는 데 사용됩니다.</p>
+<h3 id="3-강화-학습">3. 강화 학습<a hidden class="anchor" aria-hidden="true" href="#3-강화-학습">#</a></h3>
+<p>강화 학습은 에이전트가 환경과 상호작용하며 최적의 행동을 학습하는 방법입니다. 예를 들어, 게임에서 높은 점수를 얻기 위해 스스로 전략을 학습하는 AI를 생각할 수 있습니다.</p>
+<h2 id="머신러닝-알고리즘">머신러닝 알고리즘<a hidden class="anchor" aria-hidden="true" href="#머신러닝-알고리즘">#</a></h2>
+<h3 id="1-선형-회귀">1. 선형 회귀<a hidden class="anchor" aria-hidden="true" href="#1-선형-회귀">#</a></h3>
+<p>선형 회귀는 입력 변수와 출력 변수 사이의 선형 관계를 모델링하는 알고리즘입니다. 주로 예측 문제에 사용되며, 예를 들어 집값 예측에 활용됩니다.</p>
+<h3 id="2-의사-결정-트리">2. 의사 결정 트리<a hidden class="anchor" aria-hidden="true" href="#2-의사-결정-트리">#</a></h3>
+<p>의사 결정 트리는 데이터를 분할하여 결정 규칙을 만드는 알고리즘입니다. 분류 문제와 회귀 문제 모두에 사용되며, 예를 들어 고객 이탈 예측에 활용됩니다.</p>
+<h3 id="3-k-평균-군집화">3. K-평균 군집화<a hidden class="anchor" aria-hidden="true" href="#3-k-평균-군집화">#</a></h3>
+<p>K-평균 군집화는 데이터를 K개의 군집으로 나누는 비지도 학습 알고리즘입니다. 예를 들어, 마케팅에서 고객 세분화에 활용됩니다.</p>
+<h2 id="머신러닝의-실제-사례">머신러닝의 실제 사례<a hidden class="anchor" aria-hidden="true" href="#머신러닝의-실제-사례">#</a></h2>
+<h3 id="1-이미지-인식">1. 이미지 인식<a hidden class="anchor" aria-hidden="true" href="#1-이미지-인식">#</a></h3>
+<p>머신러닝은 이미지 인식 기술에 널리 사용됩니다. 예를 들어, 얼굴 인식, 객체 탐지, 의료 영상 분석 등에서 활용됩니다.</p>
+<h3 id="2-자연어-처리">2. 자연어 처리<a hidden class="anchor" aria-hidden="true" href="#2-자연어-처리">#</a></h3>
+<p>자연어 처리는 텍스트 데이터를 이해하고 처리하는 기술입니다. 예를 들어, 챗봇, 번역기, 감성 분석 등에 사용됩니다.</p>
+<h3 id="3-추천-시스템">3. 추천 시스템<a hidden class="anchor" aria-hidden="true" href="#3-추천-시스템">#</a></h3>
+<p>추천 시스템은 사용자의 취향을 분석하여 맞춤형 콘텐츠를 추천하는 기술입니다. 예를 들어, 넷플릭스의 영화 추천, 아마존의 제품 추천 등이 있습니다.</p>
+<h2 id="결론">결론<a hidden class="anchor" aria-hidden="true" href="#결론">#</a></h2>
+<p>머신러닝은 데이터 분석과 예측에 강력한 도구로, 다양한 분야에서 혁신을 이끌고 있습니다. 이번 글을 통해 머신러닝의 기본 개념과 작동 원리를 이해하고, 실제 사례를 통해 어떻게 활용되는지 살펴보았습니다. 앞으로 더 많은 학습을 통해 머신러닝의 잠재력을 최대한 활용해보세요.</p>
+<hr>
+<h2 id="마크업-데이터">마크업 데이터<a hidden class="anchor" aria-hidden="true" href="#마크업-데이터">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;@context&#34;</span>: <span style="color:#e6db74">&#34;http://schema.org&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;BlogPosting&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;headline&#34;</span>: <span style="color:#e6db74">&#34;머신러닝 기초: 초보자를 위한 이해하기 쉬운 가이드&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;머신러닝의 기본 개념과 작동 원리를 초보자도 쉽게 이해할 수 있도록 설명합니다. 머신러닝의 주요 알고리즘과 실제 사례를 통해 학습해보세요.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;keywords&#34;</span>: [<span style="color:#e6db74">&#34;머신러닝&#34;</span>, <span style="color:#e6db74">&#34;기초&#34;</span>, <span style="color:#e6db74">&#34;초보자 가이드&#34;</span>, <span style="color:#e6db74">&#34;알고리즘&#34;</span>, <span style="color:#e6db74">&#34;데이터 사이언스&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;datePublished&#34;</span>: <span style="color:#e6db74">&#34;2024-07-20&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;author&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;20년차 전문 블로거&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;publisher&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Organization&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;ML Blog&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;logo&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;ImageObject&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/logo.png&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;articleBody&#34;</span>: <span style="color:#e6db74">&#34;머신러닝은 인공지능의 한 분야로, 데이터를 분석하고 패턴을 인식하여 스스로 학습하는 기술입니다. 이번 글에서는 머신러닝의 기본 개념과 작동 원리를 초보자도 쉽게 이해할 수 있도록 설명하겠습니다. 또한, 머신러닝의 주요 알고리즘과 실제 사례를 통해 어떻게 활용되는지 알아보겠습니다. 머신러닝은 컴퓨터가 명시적인 프로그래밍 없이 데이터를 통해 학습하고 개선할 수 있도록 하는 기술입니다. 이는 다양한 알고리즘과 모델을 사용하여 데이터를 분석하고 예측하는 데 사용됩니다. 지도 학습은 정답이 있는 데이터를 사용하여 모델을 학습시키는 방법입니다. 예를 들어, 이메일의 스팸 여부를 판단하는 모델은 스팸과 스팸이 아닌 이메일 데이터를 학습하여 새로운 이메일을 분류합니다. 비지도 학습은 정답이 없는 데이터를 사용하여 패턴을 찾는 방법입니다. 예를 들어, 고객 데이터를 분석하여 비슷한 특성을 가진 고객 군집을 찾는 데 사용됩니다. 강화 학습은 에이전트가 환경과 상호작용하며 최적의 행동을 학습하는 방법입니다. 예를 들어, 게임에서 높은 점수를 얻기 위해 스스로 전략을 학습하는 AI를 생각할 수 있습니다. 선형 회귀는 입력 변수와 출력 변수 사이의 선형 관계를 모델링하는 알고리즘입니다. 주로 예측 문제에 사용되며, 예를 들어 집값 예측에 활용됩니다. 의사 결정 트리는 데이터를 분할하여 결정 규칙을 만드는 알고리즘입니다. 분류 문제와 회귀 문제 모두에 사용되며, 예를 들어 고객 이탈 예측에 활용됩니다. K-평균 군집화는 데이터를 K개의 군집으로 나누는 비지도 학습 알고리즘입니다. 예를 들어, 마케팅에서 고객 세분화에 활용됩니다. 머신러닝은 이미지 인식 기술에 널리 사용됩니다. 예를 들어, 얼굴 인식, 객체 탐지, 의료 영상 분석 등에서 활용됩니다. 자연어 처리는 텍스트 데이터를 이해하고 처리하는 기술입니다. 예를 들어, 챗봇, 번역기, 감성 분석 등에 사용됩니다. 추천 시스템은 사용자의 취향을 분석하여 맞춤형 콘텐츠를 추천하는 기술입니다. 예를 들어, 넷플릭스의 영화 추천, 아마존의 제품 추천 등이 있습니다. 머신러닝은 데이터 분석과 예측에 강력한 도구로, 다양한 분야에서 혁신을 이끌고 있습니다. 이번 글을 통해 머신러닝의 기본 개념과 작동 원리를 이해하고, 실제 사례를 통해 어떻게 활용되는지 살펴보았습니다. 앞으로 더 많은 학습을 통해 머신러닝의 잠재력을 최대한 활용해보세요.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/posts/business-administration/">
+    <span class="title">Next »</span>
+    <br>
+    <span>경영학과 - CEO가 되고 싶다면 여기에 주목하세요!</span>
+  </a>
+</nav>
+
+  </footer><div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://univmajorwiki.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">전공WIKI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
