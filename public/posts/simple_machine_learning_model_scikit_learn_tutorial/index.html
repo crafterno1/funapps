@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼 | 펀앱스</title>
 <meta name="keywords" content="머신러닝, Scikit-learn 튜토리얼, Python 머신러닝, 초보자 머신러닝">
 <meta name="description" content="머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.
 Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.
 환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다.">
 <meta name="author" content="">
-<link rel="canonical" href="https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/">
+<link rel="canonical" href="http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="sha256-VEBaQQeWSQvIdKthgfrJtnV1PMK5E3XY&#43;IJWZFnspCg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://funapps.site/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://funapps.site/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://funapps.site/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://funapps.site/apple-touch-icon.png">
-<link rel="mask-icon" href="https://funapps.site/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,75 +58,6 @@ Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머�
 
     </style>
 </noscript>
-  
-
-<meta property="og:title" content="초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼" />
-<meta property="og:description" content="머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.
-Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.
-환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/" />
-<meta property="og:image" content="https://funapps.site/images/ai1.webp" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-07-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-07-21T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://funapps.site/images/ai1.webp" />
-<meta name="twitter:title" content="초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼"/>
-<meta name="twitter:description" content="머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.
-Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.
-환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다."/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://funapps.site/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼",
-      "item": "https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼",
-  "name": "초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼",
-  "description": "머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.\nScikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.\n환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다.",
-  "keywords": [
-    "머신러닝", "Scikit-learn 튜토리얼", "Python 머신러닝", "초보자 머신러닝"
-  ],
-  "articleBody": "머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.\nScikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.\n환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다. 터미널에 아래 명령어를 입력해 주세요.\npip install numpy pandas scikit-learn matplotlib 데이터 준비 우리는 Iris 데이터셋을 사용할 것입니다. 이 데이터셋은 꽃잎과 꽃받침의 길이와 너비를 기준으로 세 종류의 붓꽃을 분류하는 데 사용됩니다.\nimport numpy as np import pandas as pd from sklearn.datasets import load_iris # 데이터 로드 iris = load_iris() df = pd.DataFrame(data=iris.data, columns=iris.feature_names) df['target'] = iris.target print(df.head()) 데이터 전처리 데이터를 전처리하고 학습 데이터와 테스트 데이터로 나눕니다.\nfrom sklearn.model_selection import train_test_split X = df.drop('target', axis=1) y = df['target'] X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) 모델 학습 이번 튜토리얼에서는 K-최근접 이웃(K-Nearest Neighbors, KNN) 알고리즘을 사용하여 모델을 학습시킵니다.\nfrom sklearn.neighbors import KNeighborsClassifier # 모델 생성 knn = KNeighborsClassifier(n_neighbors=3) # 모델 학습 knn.fit(X_train, y_train) 모델 평가 학습한 모델을 평가하고 정확도를 확인합니다.\nfrom sklearn.metrics import accuracy_score # 예측 y_pred = knn.predict(X_test) # 정확도 평가 accuracy = accuracy_score(y_test, y_pred) print(f'모델 정확도: {accuracy:.2f}') 시각화 마지막으로, 학습된 모델의 결과를 시각화해 봅니다.\nimport matplotlib.pyplot as plt from sklearn.decomposition import PCA # 데이터 차원 축소 pca = PCA(n_components=2) X_pca = pca.fit_transform(X) # 시각화 plt.figure(figsize=(8, 6)) for i in range(3): plt.scatter(X_pca[iris.target == i, 0], X_pca[iris.target == i, 1], label=iris.target_names[i]) plt.xlabel('PCA 1') plt.ylabel('PCA 2') plt.legend() plt.title('Iris 데이터셋의 PCA 시각화') plt.show() 결론 이 튜토리얼에서는 Scikit-learn을 사용하여 간단한 머신러닝 모델을 만드는 과정을 다뤘습니다. 데이터 준비, 전처리, 모델 학습, 평가, 시각화까지의 전 과정을 담아보았는데요, 이 과정을 통해 머신러닝의 기본 개념을 이해하고 실습할 수 있으셨기를 바랍니다.\n다음에는 조금 더 복잡하지만 재밌는 내용을 소개해 드리도록 할게요~!\n",
-  "wordCount" : "304",
-  "inLanguage": "en",
-  "image":"https://funapps.site/images/ai1.webp","datePublished": "2024-07-21T00:00:00Z",
-  "dateModified": "2024-07-21T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "펀앱스",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://funapps.site/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -144,7 +75,7 @@ Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머�
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://funapps.site/" accesskey="h" title="펀앱스 (Alt + H)">펀앱스</a>
+            <a href="http://localhost:1313/" accesskey="h" title="펀앱스 (Alt + H)">펀앱스</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -170,12 +101,12 @@ Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머�
         </div>
         <ul id="menu">
             <li>
-                <a href="https://funapps.site/archives/" title="아카이브">
+                <a href="http://localhost:1313/archives/" title="아카이브">
                     <span>아카이브</span>
                 </a>
             </li>
             <li>
-                <a href="https://funapps.site/search/" title="검색 (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="검색 (Alt &#43; /)" accesskey=/>
                     <span>검색</span>
                 </a>
             </li>
@@ -186,7 +117,7 @@ Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머�
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://funapps.site/">Home</a>&nbsp;»&nbsp;<a href="https://funapps.site/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼
     </h1>
@@ -194,7 +125,7 @@ Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머�
 
 </div>
   </header> 
-<figure class="entry-cover"><img loading="eager" src="https://funapps.site/images/ai1.webp" alt="AI Machine Learning">
+<figure class="entry-cover"><img loading="eager" src="http://localhost:1313/images/ai1.webp" alt="AI Machine Learning">
         
 </figure>
   <div class="post-content"><p>머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.</p>
@@ -270,7 +201,7 @@ plt.show()
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://funapps.site/posts/first_ai_program_python_basic_code_examples/">
+  <a class="prev" href="http://localhost:1313/posts/first_ai_program_python_basic_code_examples/">
     <span class="title">« Prev</span>
     <br>
     <span>Python으로 첫 AI 프로그램 작성하기: 기본 코드 예제</span>
@@ -295,7 +226,7 @@ plt.show()
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://funapps.site/">펀앱스</a></span> · 
+        <span>&copy; 2024 <a href="http://localhost:1313/">펀앱스</a></span> · 
 
     <span>
         Powered by
