@@ -6,8 +6,18 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 23 Jul 2024 15:48:16 +1200</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 22:01:57 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pandas를 이용한 데이터 전처리와 시각화: 기본 예제</title>
+      <link>https://funapps.site/posts/data_preprocessing_visualization_pandas_basic_examples/</link>
+      <pubDate>Tue, 23 Jul 2024 22:01:57 +1200</pubDate>
+      <guid>https://funapps.site/posts/data_preprocessing_visualization_pandas_basic_examples/</guid>
+      <description>Pandas를 이용한 데이터 전처리와 시각화: 기본 예제 Pandas는 데이터 분석을 위한 Python 라이브러리로, 데이터 조작과 분석을 쉽게 할 수 있도록 다양한 기능을 제공합니다. 이번 글에서는 Pandas를 이용해 데이터 전처리와 시각화를 하는 기본 예제를 통해서 Pandas의 강력한 기능들을 알아보도록 하겠습니다.
+Pandas 설치하기 먼저 Pandas를 설치해야 합니다. 다음 명령어를 사용해 Pandas를 설치할 수 있습니다:
+pip install pandas 설치가 완료되면 Pandas를 사용해 데이터 전처리와 시각화를 할 수 있습니다.
+데이터 불러오기 먼저 데이터 파일을 불러오는 방법을 알아보겠습니다.</description>
+    </item>
     <item>
       <title>Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초</title>
       <link>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</link>

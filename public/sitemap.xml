@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://funapps.site/posts/</loc>
-    <lastmod>2024-07-23T15:48:16+12:00</lastmod>
+    <loc>https://funapps.site/posts/data_preprocessing_visualization_pandas_basic_examples/</loc>
+    <lastmod>2024-07-23T22:01:57+12:00</lastmod>
   </url><url>
-    <loc>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</loc>
-    <lastmod>2024-07-23T15:48:16+12:00</lastmod>
+    <loc>https://funapps.site/posts/</loc>
+    <lastmod>2024-07-23T22:01:57+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/</loc>
+    <lastmod>2024-07-23T22:01:57+12:00</lastmod>
+  </url><url>
+    <loc>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</loc>
     <lastmod>2024-07-23T15:48:16+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/posts/face_recognition_program_opencv/</loc>
