@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초 | 펀앱스</title>
+<meta name="keywords" content="Python, NLTK, 챗봇 만들기, 자연어 처리, Python 챗봇, NLTK 챗봇, 자연어 처리 기초">
+<meta name="description" content="Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.
+자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다.">
+<meta name="author" content="">
+<link rel="canonical" href="https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="sha256-VEBaQQeWSQvIdKthgfrJtnV1PMK5E3XY&#43;IJWZFnspCg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://funapps.site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://funapps.site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://funapps.site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://funapps.site/apple-touch-icon.png">
+<link rel="mask-icon" href="https://funapps.site/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초" />
+<meta property="og:description" content="Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.
+자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/" />
+<meta property="og:image" content="https://funapps.site/images/ai6.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-23T15:48:16+12:00" />
+<meta property="article:modified_time" content="2024-07-23T15:48:16+12:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://funapps.site/images/ai6.webp" />
+<meta name="twitter:title" content="Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초"/>
+<meta name="twitter:description" content="Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.
+자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://funapps.site/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초",
+      "item": "https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초",
+  "name": "Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초",
+  "description": "Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.\n자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다.",
+  "keywords": [
+    "Python", "NLTK", "챗봇 만들기", "자연어 처리", "Python 챗봇", "NLTK 챗봇", "자연어 처리 기초"
+  ],
+  "articleBody": "Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.\n자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다. NLTK는 이러한 자연어 처리를 쉽게 할 수 있도록 도와주는 도구로, 토큰화, 형태소 분석, 품사 태깅, 문장 파싱 등 다양한 기능을 제공합니다.\nNLTK 설치하기 먼저 NLTK를 설치해야 합니다. 다음 명령어를 사용해 NLTK를 설치할 수 있습니다:\npip install nltk 설치가 완료되면, NLTK 데이터를 다운로드해야 합니다. Python 인터프리터를 실행하고 다음 코드를 입력하세요:\nimport nltk nltk.download('punkt') nltk.download('averaged_perceptron_tagger') nltk.download('wordnet') 이제 NLTK를 사용할 준비가 되었습니다.\n간단한 챗봇 만들기 이제 간단한 챗봇을 만들어보겠습니다. 이 챗봇은 사용자의 입력을 받아 간단한 응답을 돌려주는 역할을 합니다. 먼저 필요한 라이브러리를 임포트합니다:\nimport nltk from nltk.chat.util import Chat, reflections 다음으로 챗봇의 응답 패턴을 정의합니다. 이 패턴은 정규 표현식과 응답 문장으로 이루어져 있습니다:\npairs = [ [ r\"hi|hello\", [\"Hello\", \"Hi there\"] ], [ r\"how are you ?\", [\"I'm fine, thank you\"] ], [ r\"what is your name ?\", [\"My name is Chatbot\"] ], [ r\"bye|goodbye\", [\"Goodbye\", \"See you later\"] ] ] 이제 챗봇을 생성하고, 사용자와 대화를 시작할 수 있습니다:\nchatbot = Chat(pairs, reflections) def chatbot_response(user_input): return chatbot.respond(user_input) while True: user_input = input(\"You: \") if user_input.lower() in [\"bye\", \"goodbye\"]: print(\"Chatbot: Goodbye!\") break response = chatbot_response(user_input) print(f\"Chatbot: {response}\") 위 코드를 실행하면 간단한 챗봇이 동작하는 것을 볼 수 있습니다. 사용자의 입력에 따라 미리 정의된 패턴에 맞는 응답을 돌려줍니다.\n마무리 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보았습니다. 자연어 처리의 기초 개념과 함께, NLTK를 사용한 기본적인 텍스트 처리 방법을 이해해 보셨길 바래봅니다. 다음으로는 Pandas를 이용해서 데이터 전처리와 시각화에 대해서 얘기해 보도록 하겠습니다. 다음글도 기대해주세요~\n",
+  "wordCount" : "298",
+  "inLanguage": "en",
+  "image":"https://funapps.site/images/ai6.webp","datePublished": "2024-07-23T15:48:16+12:00",
+  "dateModified": "2024-07-23T15:48:16+12:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "펀앱스",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://funapps.site/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://funapps.site/" accesskey="h" title="펀앱스 (Alt + H)">펀앱스</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://funapps.site/archives/" title="아카이브">
+                    <span>아카이브</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://funapps.site/search/" title="검색 (Alt &#43; /)" accesskey=/>
+                    <span>검색</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://funapps.site/">Home</a>&nbsp;»&nbsp;<a href="https://funapps.site/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초
+    </h1>
+    <div class="post-meta"><span title='2024-07-23 15:48:16 +1200 NZST'>July 23, 2024</span>
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://funapps.site/images/ai6.webp" alt="AI Deep Learning Model">
+        
+</figure>
+  <div class="post-content"><p>Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.</p>
+<h2 id="자연어-처리란">자연어 처리란?<a hidden class="anchor" aria-hidden="true" href="#자연어-처리란">#</a></h2>
+<p>자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다. NLTK는 이러한 자연어 처리를 쉽게 할 수 있도록 도와주는 도구로, 토큰화, 형태소 분석, 품사 태깅, 문장 파싱 등 다양한 기능을 제공합니다.</p>
+<h2 id="nltk-설치하기">NLTK 설치하기<a hidden class="anchor" aria-hidden="true" href="#nltk-설치하기">#</a></h2>
+<p>먼저 NLTK를 설치해야 합니다. 다음 명령어를 사용해 NLTK를 설치할 수 있습니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install nltk
+</span></span></code></pre></div><p>설치가 완료되면, NLTK 데이터를 다운로드해야 합니다. Python 인터프리터를 실행하고 다음 코드를 입력하세요:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;punkt&#39;</span>)
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;averaged_perceptron_tagger&#39;</span>)
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;wordnet&#39;</span>)
+</span></span></code></pre></div><p>이제 NLTK를 사용할 준비가 되었습니다.</p>
+<h2 id="간단한-챗봇-만들기">간단한 챗봇 만들기<a hidden class="anchor" aria-hidden="true" href="#간단한-챗봇-만들기">#</a></h2>
+<p>이제 간단한 챗봇을 만들어보겠습니다. 이 챗봇은 사용자의 입력을 받아 간단한 응답을 돌려주는 역할을 합니다. 먼저 필요한 라이브러리를 임포트합니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> nltk.chat.util <span style="color:#f92672">import</span> Chat, reflections
+</span></span></code></pre></div><p>다음으로 챗봇의 응답 패턴을 정의합니다. 이 패턴은 정규 표현식과 응답 문장으로 이루어져 있습니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pairs <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;hi|hello&#34;</span>,
+</span></span><span style="display:flex;"><span>        [<span style="color:#e6db74">&#34;Hello&#34;</span>, <span style="color:#e6db74">&#34;Hi there&#34;</span>]
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;how are you ?&#34;</span>,
+</span></span><span style="display:flex;"><span>        [<span style="color:#e6db74">&#34;I&#39;m fine, thank you&#34;</span>]
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;what is your name ?&#34;</span>,
+</span></span><span style="display:flex;"><span>        [<span style="color:#e6db74">&#34;My name is Chatbot&#34;</span>]
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;bye|goodbye&#34;</span>,
+</span></span><span style="display:flex;"><span>        [<span style="color:#e6db74">&#34;Goodbye&#34;</span>, <span style="color:#e6db74">&#34;See you later&#34;</span>]
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>이제 챗봇을 생성하고, 사용자와 대화를 시작할 수 있습니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chatbot <span style="color:#f92672">=</span> Chat(pairs, reflections)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">chatbot_response</span>(user_input):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> chatbot<span style="color:#f92672">.</span>respond(user_input)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    user_input <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;You: &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> user_input<span style="color:#f92672">.</span>lower() <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#34;bye&#34;</span>, <span style="color:#e6db74">&#34;goodbye&#34;</span>]:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Chatbot: Goodbye!&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> chatbot_response(user_input)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Chatbot: </span><span style="color:#e6db74">{</span>response<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>위 코드를 실행하면 간단한 챗봇이 동작하는 것을 볼 수 있습니다. 사용자의 입력에 따라 미리 정의된 패턴에 맞는 응답을 돌려줍니다.</p>
+<h2 id="마무리">마무리<a hidden class="anchor" aria-hidden="true" href="#마무리">#</a></h2>
+<p>이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보았습니다. 자연어 처리의 기초 개념과 함께, NLTK를 사용한 기본적인 텍스트 처리 방법을 이해해 보셨길 바래봅니다. 다음으로는 Pandas를 이용해서 데이터 전처리와 시각화에 대해서 얘기해 보도록 하겠습니다. 다음글도 기대해주세요~</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://funapps.site/posts/face_recognition_program_opencv/">
+    <span class="title">Next »</span>
+    <br>
+    <span>OpenCV를 사용한 얼굴 인식 프로그램 만들기</span>
+  </a>
+</nav>
+
+  </footer><div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://funapps-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://funapps.site/">펀앱스</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

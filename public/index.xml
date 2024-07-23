@@ -2,25 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>펀앱스</title>
-    <link>http://localhost:1313/</link>
+    <link>https://funapps.site/</link>
     <description>Recent content on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 23 Jul 2024 09:58:49 +1200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jul 2024 15:48:16 +1200</lastBuildDate>
+    <atom:link href="https://funapps.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python과 NLTK로 간단한 챗봇 만들기: 자연어 처리 기초</title>
+      <link>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</link>
+      <pubDate>Tue, 23 Jul 2024 15:48:16 +1200</pubDate>
+      <guid>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</guid>
+      <description>Python은 그 간편함과 강력한 라이브러리들 덕분에 데이터 과학, 웹 개발, 인공지능 등 다양한 분야에서 널리 사용되고 있습니다. 그 중에서도 NLTK(Natural Language Toolkit)는 자연어 처리를 위해 가장 많이 사용되는 라이브러리 중 하나입니다. 이번 글에서는 Python과 NLTK를 이용해 간단한 챗봇을 만들어보며 자연어 처리의 기초를 배워보겠습니다.
+자연어 처리란? 자연어 처리는 인간이 사용하는 언어를 컴퓨터가 이해하고 분석할 수 있도록 하는 기술입니다. 이는 텍스트 분석, 음성 인식, 번역, 감정 분석 등 다양한 분야에 응용될 수 있습니다.</description>
+    </item>
     <item>
       <title>OpenCV를 사용한 얼굴 인식 프로그램 만들기</title>
-      <link>http://localhost:1313/posts/face_recognition_program_opencv/</link>
+      <link>https://funapps.site/posts/face_recognition_program_opencv/</link>
       <pubDate>Tue, 23 Jul 2024 09:58:49 +1200</pubDate>
-      <guid>http://localhost:1313/posts/face_recognition_program_opencv/</guid>
+      <guid>https://funapps.site/posts/face_recognition_program_opencv/</guid>
       <description>얼굴 인식 기술은 보안, 접근 제어, 사용자 경험 개선 등 다양한 분야에서 널리 사용되고 있습니다. 이번 포스트에서는 OpenCV를 사용하여 간단한 얼굴 인식 프로그램을 만드는 방법을 소개합니다. 초보자 분들도 쉽게 따라하실 수 있도록 단계별로 가이드를 준비했으니 AI 얼굴 인식의 기초를 익혀보시길 바래요.
 OpenCV 소개 OpenCV(Open Source Computer Vision Library)는 컴퓨터 비전 응용 프로그램을 개발하기 위한 오픈 소스 라이브러리입니다. OpenCV는 다양한 이미지 처리 및 컴퓨터 비전 알고리즘을 제공하여 얼굴 인식, 객체 추적 등 다양한 작업을 쉽게 구현할 수 있어요.</description>
     </item>
     <item>
       <title>Keras를 이용한 딥러닝 모델 구축: 손쉬운 단계별 가이드</title>
-      <link>http://localhost:1313/posts/easy_deep_learning_keras_step_by_step_guide/</link>
+      <link>https://funapps.site/posts/easy_deep_learning_keras_step_by_step_guide/</link>
       <pubDate>Mon, 22 Jul 2024 21:45:17 +1200</pubDate>
-      <guid>http://localhost:1313/posts/easy_deep_learning_keras_step_by_step_guide/</guid>
+      <guid>https://funapps.site/posts/easy_deep_learning_keras_step_by_step_guide/</guid>
       <description>이번 포스트에서는 Keras를 사용하여 딥러닝 모델을 구축하는 방법을 소개해 보도록 할게요. 초보자분들도 쉽게 따라하실 수 있는 단계별 가이드를 통해서 딥러닝의 기초를 학습해 보시길 바래요.
 Keras 소개 Keras는 Python에서 사용할 수 있는 고수준 신경망 API로, TensorFlow의 위에서 동작합니다. 사용이 간편하고 직관적이기 떄문에 딥러닝 모델을 신속하게 프로토타이핑하는 데 많이 사용된답니다.
 환경 설정 먼저, Keras와 필요한 라이브러리를 설치해야 합니다. 터미널에 아래 명령어를 입력해 주세요.
@@ -28,27 +36,27 @@ pip install tensorflow numpy matplotlib 데이터 준비 Keras에서 제공하�
     </item>
     <item>
       <title>TensorFlow로 시작하는 이미지 분류 모델: 기초 튜토리얼</title>
-      <link>http://localhost:1313/posts/image_classification_tensorflow_beginners_tutorial/</link>
+      <link>https://funapps.site/posts/image_classification_tensorflow_beginners_tutorial/</link>
       <pubDate>Mon, 22 Jul 2024 12:30:22 +1200</pubDate>
-      <guid>http://localhost:1313/posts/image_classification_tensorflow_beginners_tutorial/</guid>
+      <guid>https://funapps.site/posts/image_classification_tensorflow_beginners_tutorial/</guid>
       <description>이미지 분류는 인공지능과 머신러닝 분야에서 중요한 기술 중 하나입니다. 이번 포스트에서는 TensorFlow를 사용하여 간단한 이미지 분류 모델을 만드는 방법을 소개합니다. 이 튜토리얼을 통해서 TensorFlow의 기본 사용법과 이미지 분류의 기초를 익혀보시길 바래요.
 TensorFlow 소개 TensorFlow는 Google에서 개발한 오픈 소스 머신러닝 라이브러리로, 다양한 머신러닝과 딥러닝 모델을 쉽게 구현할 수 있게 해줍니다. 이 튜토리얼에서는 TensorFlow를 사용하여 이미지 분류 모델을 만들어보겠습니다.
 환경 설정 먼저, TensorFlow와 필요한 라이브러리를 설치해야 합니다. 터미널에 아래 명령어를 입력해 주세요.</description>
     </item>
     <item>
       <title>Python으로 첫 AI 프로그램 작성하기: 기본 코드 예제</title>
-      <link>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</link>
+      <link>https://funapps.site/posts/first_ai_program_python_basic_code_examples/</link>
       <pubDate>Mon, 22 Jul 2024 10:43:49 +1200</pubDate>
-      <guid>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</guid>
+      <guid>https://funapps.site/posts/first_ai_program_python_basic_code_examples/</guid>
       <description>인공지능(AI)은 현대 기술의 핵심 중 하나로, 다양한 분야에서 그 활용이 점점 더 늘어나고 있습니다. 이번 포스트에서는 Python을 사용하여 첫번째 AI 프로그램을 작성하는 방법을 소개할 예정입니다. 초보자도 쉽게 따라할 수 있는 기본 코드 예제를 통해서 AI의 기초를 익혀보시길 바래요~
 Python 환경 설정 먼저, AI 프로그램을 작성하기 위한 Python 환경을 설정해야 합니다. Python을 설치하고 필요한 라이브러리를 설치하는 방법을 알아보시죠.
 Python 설치 Python 공식 웹사이트에서 최신 버전을 다운로드하여 설치합니다. 설치가 완료되면 터미널(또는 명령 프롬프트)을 열어 Python이 제대로 설치되었는지를 확인합니다.</description>
     </item>
     <item>
       <title>초보자를 위한 간단한 머신러닝 모델 만들기: Scikit-learn 튜토리얼</title>
-      <link>http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/</link>
+      <link>https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/</link>
       <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/</guid>
+      <guid>https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/</guid>
       <description>머신러닝은 데이터 분석과 인공지능의 핵심 기술 중 하나입니다. 이번 포스트에서는 초보자도 쉽게 따라할 수 있는 Scikit-learn을 이용한 간단한 머신러닝 모델 만들기를 소개해 보려고 합니다. 이 튜토리얼을 통해 머신러닝의 기본 개념에 대해서 간접적으로나마 경험해 보실수 있기를 바래요.
 Scikit-learn 소개 Scikit-learn은 Python에서 가장 널리 사용되는 머신러닝 라이브러리 중 하나로, 간단한 인터페이스와 다양한 알고리즘을 제공합니다. 데이터 전처리, 모델 학습, 평가 등을 쉽게 할 수 있어 초보자에게 적합합니다.
 환경 설정 먼저, Scikit-learn과 필요한 라이브러리를 설치해야 합니다.</description>
