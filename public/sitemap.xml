@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/image_generation_gan_tensorflow_example/</loc>
+    <loc>https://funapps.site/posts/image_generation_gan_tensorflow_example/</loc>
     <lastmod>2024-07-24T10:02:51+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://funapps.site/posts/</loc>
     <lastmod>2024-07-24T10:02:51+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://funapps.site/</loc>
     <lastmod>2024-07-24T10:02:51+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/data_preprocessing_visualization_pandas_basic_examples/</loc>
+    <loc>https://funapps.site/posts/data_preprocessing_visualization_pandas_basic_examples/</loc>
     <lastmod>2024-07-23T22:01:57+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/simple_chatbot_python_nltk_nlp_basics/</loc>
+    <loc>https://funapps.site/posts/simple_chatbot_python_nltk_nlp_basics/</loc>
     <lastmod>2024-07-23T15:48:16+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/face_recognition_program_opencv/</loc>
+    <loc>https://funapps.site/posts/face_recognition_program_opencv/</loc>
     <lastmod>2024-07-23T09:58:49+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/easy_deep_learning_keras_step_by_step_guide/</loc>
+    <loc>https://funapps.site/posts/easy_deep_learning_keras_step_by_step_guide/</loc>
     <lastmod>2024-07-22T21:45:17+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/image_classification_tensorflow_beginners_tutorial/</loc>
+    <loc>https://funapps.site/posts/image_classification_tensorflow_beginners_tutorial/</loc>
     <lastmod>2024-07-22T12:30:22+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/first_ai_program_python_basic_code_examples/</loc>
+    <loc>https://funapps.site/posts/first_ai_program_python_basic_code_examples/</loc>
     <lastmod>2024-07-22T10:43:49+12:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/simple_machine_learning_model_scikit_learn_tutorial/</loc>
+    <loc>https://funapps.site/posts/simple_machine_learning_model_scikit_learn_tutorial/</loc>
     <lastmod>2024-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://funapps.site/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://funapps.site/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://funapps.site/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://funapps.site/archives/</loc>
   </url>
 </urlset>

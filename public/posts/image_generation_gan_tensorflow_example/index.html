@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>GAN을 활용한 이미지 생성: TensorFlow 예제 | 펀앱스</title>
 <meta name="keywords" content="GAN, 이미지 생성, TensorFlow, 딥러닝, 생성적 적대 신경망, GAN 예제">
 <meta name="description" content="GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.
 GAN의 기본 개념 GAN은 생성자(Generator)와 판별자(Discriminator)라는 두 개의 신경망으로 구성됩니다. 생성자는 무작위 노이즈를 입력받아 가짜 이미지를 생성하고, 판별자는 이 이미지가 진짜인지 가짜인지 판별합니다. 두 신경망은 서로 경쟁하면서 성능이 향상됩니다.
 TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명령어를 사용해 TensorFlow를 설치할 수 있습니다:">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/image_generation_gan_tensorflow_example/">
+<link rel="canonical" href="https://funapps.site/posts/image_generation_gan_tensorflow_example/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.54405a410796490bc874ab6181fac9b675753cc2b91375d8f882566459eca428.css" integrity="sha256-VEBaQQeWSQvIdKthgfrJtnV1PMK5E3XY&#43;IJWZFnspCg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://funapps.site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://funapps.site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://funapps.site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://funapps.site/apple-touch-icon.png">
+<link rel="mask-icon" href="https://funapps.site/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/image_generation_gan_tensorflow_example/">
+<link rel="alternate" hreflang="en" href="https://funapps.site/posts/image_generation_gan_tensorflow_example/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +58,76 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
 
     </style>
 </noscript>
-<meta name="google-adsense-account" content="ca-pub-1421021169521636">
+<meta name="google-adsense-account" content="ca-pub-5886736974219758">
+  
+
+<meta property="og:title" content="GAN을 활용한 이미지 생성: TensorFlow 예제" />
+<meta property="og:description" content="GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.
+GAN의 기본 개념 GAN은 생성자(Generator)와 판별자(Discriminator)라는 두 개의 신경망으로 구성됩니다. 생성자는 무작위 노이즈를 입력받아 가짜 이미지를 생성하고, 판별자는 이 이미지가 진짜인지 가짜인지 판별합니다. 두 신경망은 서로 경쟁하면서 성능이 향상됩니다.
+TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명령어를 사용해 TensorFlow를 설치할 수 있습니다:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://funapps.site/posts/image_generation_gan_tensorflow_example/" />
+<meta property="og:image" content="https://funapps.site/images/ai8.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-24T10:02:51+12:00" />
+<meta property="article:modified_time" content="2024-07-24T10:02:51+12:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://funapps.site/images/ai8.webp" />
+<meta name="twitter:title" content="GAN을 활용한 이미지 생성: TensorFlow 예제"/>
+<meta name="twitter:description" content="GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.
+GAN의 기본 개념 GAN은 생성자(Generator)와 판별자(Discriminator)라는 두 개의 신경망으로 구성됩니다. 생성자는 무작위 노이즈를 입력받아 가짜 이미지를 생성하고, 판별자는 이 이미지가 진짜인지 가짜인지 판별합니다. 두 신경망은 서로 경쟁하면서 성능이 향상됩니다.
+TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명령어를 사용해 TensorFlow를 설치할 수 있습니다:"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://funapps.site/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "GAN을 활용한 이미지 생성: TensorFlow 예제",
+      "item": "https://funapps.site/posts/image_generation_gan_tensorflow_example/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GAN을 활용한 이미지 생성: TensorFlow 예제",
+  "name": "GAN을 활용한 이미지 생성: TensorFlow 예제",
+  "description": "GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.\nGAN의 기본 개념 GAN은 생성자(Generator)와 판별자(Discriminator)라는 두 개의 신경망으로 구성됩니다. 생성자는 무작위 노이즈를 입력받아 가짜 이미지를 생성하고, 판별자는 이 이미지가 진짜인지 가짜인지 판별합니다. 두 신경망은 서로 경쟁하면서 성능이 향상됩니다.\nTensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명령어를 사용해 TensorFlow를 설치할 수 있습니다:",
+  "keywords": [
+    "GAN", "이미지 생성", "TensorFlow", "딥러닝", "생성적 적대 신경망", "GAN 예제"
+  ],
+  "articleBody": "GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.\nGAN의 기본 개념 GAN은 생성자(Generator)와 판별자(Discriminator)라는 두 개의 신경망으로 구성됩니다. 생성자는 무작위 노이즈를 입력받아 가짜 이미지를 생성하고, 판별자는 이 이미지가 진짜인지 가짜인지 판별합니다. 두 신경망은 서로 경쟁하면서 성능이 향상됩니다.\nTensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명령어를 사용해 TensorFlow를 설치할 수 있습니다:\npip install tensorflow 설치가 완료되면 TensorFlow를 사용해 GAN을 구현할 수 있습니다.\n데이터셋 준비 GAN을 훈련시키기 위해 데이터셋이 필요합니다. 이번 예제에서는 MNIST 데이터셋을 사용하겠습니다:\nimport tensorflow as tf from tensorflow.keras.datasets import mnist # MNIST 데이터셋 불러오기 (train_images, _), (_, _) = mnist.load_data() train_images = train_images.reshape(train_images.shape[0], 28, 28, 1).astype('float32') train_images = (train_images - 127.5) / 127.5 # -1과 1 사이로 정규화 생성자 모델 만들기 생성자 모델은 무작위 노이즈를 입력받아 이미지를 생성합니다. 간단한 CNN 구조로 생성자를 구현할 수 있습니다:\nfrom tensorflow.keras.models import Sequential from tensorflow.keras.layers import Dense, Reshape, Conv2DTranspose, BatchNormalization, ReLU def build_generator(): model = Sequential() model.add(Dense(7*7*256, use_bias=False, input_shape=(100,))) model.add(BatchNormalization()) model.add(ReLU()) model.add(Reshape((7, 7, 256))) model.add(Conv2DTranspose(128, (5, 5), strides=(1, 1), padding='same', use_bias=False)) model.add(BatchNormalization()) model.add(ReLU()) model.add(Conv2DTranspose(64, (5, 5), strides=(2, 2), padding='same', use_bias=False)) model.add(BatchNormalization()) model.add(ReLU()) model.add(Conv2DTranspose(1, (5, 5), strides=(2, 2), padding='same', use_bias=False, activation='tanh')) return model 판별자 모델 만들기 판별자 모델은 이미지를 입력받아 진짜인지 가짜인지 판별합니다. 간단한 CNN 구조로 판별자를 구현할 수 있습니다:\nfrom tensorflow.keras.layers import Flatten, Conv2D, LeakyReLU, Dropout def build_discriminator(): model = Sequential() model.add(Conv2D(64, (5, 5), strides=(2, 2), padding='same', input_shape=[28, 28, 1])) model.add(LeakyReLU()) model.add(Dropout(0.3)) model.add(Conv2D(128, (5, 5), strides=(2, 2), padding='same')) model.add(LeakyReLU()) model.add(Dropout(0.3)) model.add(Flatten()) model.add(Dense(1)) return model GAN 훈련하기 생성자와 판별자를 결합하여 GAN을 훈련합니다. GAN 훈련 과정은 다음과 같습니다:\nimport numpy as np import matplotlib.pyplot as plt generator = build_generator() discriminator = build_discriminator() cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True) # 판별자 손실 함수 def discriminator_loss(real_output, fake_output): real_loss = cross_entropy(tf.ones_like(real_output), real_output) fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output) return real_loss + fake_loss # 생성자 손실 함수 def generator_loss(fake_output): return cross_entropy(tf.ones_like(fake_output), fake_output) generator_optimizer = tf.keras.optimizers.Adam(1e-4) discriminator_optimizer = tf.keras.optimizers.Adam(1e-4) @tf.function def train_step(images): noise = tf.random.normal([batch_size, 100]) with tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape: generated_images = generator(noise, training=True) real_output = discriminator(images, training=True) fake_output = discriminator(generated_images, training=True) gen_loss = generator_loss(fake_output) disc_loss = discriminator_loss(real_output, fake_output) gradients_of_generator = gen_tape.gradient(gen_loss, generator.trainable_variables) gradients_of_discriminator = disc_tape.gradient(disc_loss, discriminator.trainable_variables) generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables)) discriminator_optimizer.apply_gradients(zip(gradients_of_discriminator, discriminator.trainable_variables)) def train(dataset, epochs): for epoch in range(epochs): for image_batch in dataset: train_step(image_batch) # 생성된 이미지 시각화 noise = tf.random.normal([16, 100]) generated_images = generator(noise, training=False) fig = plt.figure(figsize=(4, 4)) for i in range(generated_images.shape[0]): plt.subplot(4, 4, i+1) plt.imshow(generated_images[i, :, :, 0] * 127.5 + 127.5, cmap='gray') plt.axis('off') plt.show() BUFFER_SIZE = 60000 BATCH_SIZE = 256 train_dataset = tf.data.Dataset.from_tensor_slices(train_images).shuffle(BUFFER_SIZE).batch(BATCH_SIZE) train(train_dataset, epochs=50) 위 코드를 실행하면 GAN 모델이 훈련되며, 훈련 과정 중에 생성된 이미지들을 시각화할 수 있습니다.\n마무리 이번 글에서는 TensorFlow를 이용해 GAN을 구현하고 이미지를 생성하는 방법을 살펴보았습니다. GAN은 생성자와 판별자가 경쟁하면서 성능이 향상되는 딥러닝 모델로, 다양한 응용 분야에서 활용될 수 있습니다. 다음글에서는 조금 더 재밌는 내용으로 Python을 사용해서 간단한 텍스트 요약 프로그램을 만들어 보도록 하겠습니다. 다음 포스트도 기대해 주세요~.\n",
+  "wordCount" : "473",
+  "inLanguage": "en",
+  "image":"https://funapps.site/images/ai8.webp","datePublished": "2024-07-24T10:02:51+12:00",
+  "dateModified": "2024-07-24T10:02:51+12:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://funapps.site/posts/image_generation_gan_tensorflow_example/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "펀앱스",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://funapps.site/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -76,7 +145,7 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="펀앱스 (Alt + H)">펀앱스</a>
+            <a href="https://funapps.site/" accesskey="h" title="펀앱스 (Alt + H)">펀앱스</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +171,12 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/archives/" title="아카이브">
+                <a href="https://funapps.site/archives/" title="아카이브">
                     <span>아카이브</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="검색 (Alt &#43; /)" accesskey=/>
+                <a href="https://funapps.site/search/" title="검색 (Alt &#43; /)" accesskey=/>
                     <span>검색</span>
                 </a>
             </li>
@@ -118,7 +187,7 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://funapps.site/">Home</a>&nbsp;»&nbsp;<a href="https://funapps.site/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       GAN을 활용한 이미지 생성: TensorFlow 예제
     </h1>
@@ -126,7 +195,7 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
 
 </div>
   </header> 
-<figure class="entry-cover"><img loading="eager" src="http://localhost:1313/images/ai8.webp" alt="AI Deep Learning Model">
+<figure class="entry-cover"><img loading="eager" src="https://funapps.site/images/ai8.webp" alt="AI Deep Learning Model">
         
 </figure>
   <div class="post-content"><p>GAN(Generative Adversarial Network, 생성적 적대 신경망)은 두 개의 신경망을 활용하여 서로 경쟁하면서 데이터를 생성하는 딥러닝 모델입니다. 이번 글에서는 TensorFlow를 사용하여 GAN을 구현하고, 이를 통해 이미지를 생성하는 과정을 살펴보겠습니다.</p>
@@ -257,7 +326,7 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="next" href="http://localhost:1313/posts/data_preprocessing_visualization_pandas_basic_examples/">
+  <a class="next" href="https://funapps.site/posts/data_preprocessing_visualization_pandas_basic_examples/">
     <span class="title">Next »</span>
     <br>
     <span>Pandas를 이용한 데이터 전처리와 시각화: 기본 예제</span>
@@ -282,7 +351,7 @@ TensorFlow 설치하기 먼저 TensorFlow를 설치해야 합니다. 다음 명�
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/">펀앱스</a></span> · 
+        <span>&copy; 2024 <a href="https://funapps.site/">펀앱스</a></span> · 
 
     <span>
         Powered by
