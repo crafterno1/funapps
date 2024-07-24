@@ -6,8 +6,16 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 24 Jul 2024 10:02:51 +1200</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 22:49:41 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python으로 텍스트 요약 프로그램 만들기: 자연어 처리 실습</title>
+      <link>https://funapps.site/posts/text_summarization_program_python_nlp_practice/</link>
+      <pubDate>Wed, 24 Jul 2024 22:49:41 +1200</pubDate>
+      <guid>https://funapps.site/posts/text_summarization_program_python_nlp_practice/</guid>
+      <description>자연어 처리(NLP, Natural Language Processing)는 텍스트 데이터를 이해하고 처리하는 데 중점을 둔 인공지능의 한 분야입니다. 이번 글에서는 Python과 NLTK를 사용하여 텍스트 요약 프로그램을 만드는 방법을 소개해 드리도록 하겠습니다. 이 프로그램은 긴 텍스트를 요약하여 핵심 내용을 추출하는 데 유용하니 조금 어렵더라도 천천히 따라해 보시면서 꼭 이해해 하시길 바래요.
+준비 작업 Python과 NLTK 설치하기 우선 Python과 NLTK(Natural Language Toolkit)를 설치해야 합니다. NLTK는 파이썬을 위한 강력한 자연어 처리 라이브러리입니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:</description>
+    </item>
     <item>
       <title>GAN을 활용한 이미지 생성: TensorFlow 예제</title>
       <link>https://funapps.site/posts/image_generation_gan_tensorflow_example/</link>
