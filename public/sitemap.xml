@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://funapps.site/posts/</loc>
-    <lastmod>2024-07-25T09:34:15+12:00</lastmod>
+    <loc>https://funapps.site/posts/ai_music_generation_magenta_beginners_guide/</loc>
+    <lastmod>2024-07-25T22:55:25+12:00</lastmod>
   </url><url>
-    <loc>https://funapps.site/posts/movie_recommendation_system_python_basic_algorithms/</loc>
-    <lastmod>2024-07-25T09:34:15+12:00</lastmod>
+    <loc>https://funapps.site/posts/</loc>
+    <lastmod>2024-07-25T22:55:25+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/</loc>
+    <lastmod>2024-07-25T22:55:25+12:00</lastmod>
+  </url><url>
+    <loc>https://funapps.site/posts/movie_recommendation_system_python_basic_algorithms/</loc>
     <lastmod>2024-07-25T09:34:15+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/posts/text_summarization_program_python_nlp_practice/</loc>
