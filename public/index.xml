@@ -6,8 +6,17 @@
     <description>Recent content on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 25 Jul 2024 22:55:25 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2024 09:53:11 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python과 Scikit-learn으로 간단한 의료 데이터 분석</title>
+      <link>https://funapps.site/posts/medical_data_analysis_python_scikit_learn/</link>
+      <pubDate>Fri, 26 Jul 2024 09:53:11 +1200</pubDate>
+      <guid>https://funapps.site/posts/medical_data_analysis_python_scikit_learn/</guid>
+      <description>의료 데이터 분석은 환자 기록, 의료 진단, 치료 결과 등을 분석하여 유의미한 인사이트를 도출하는 과정입니다. 이번 글에서는 Python과 Scikit-learn을 사용하여 간단한 의료 데이터 분석을 수행하는 방법을 소개하겠습니다. 이 가이드는 초보자도 쉽게 따라할 수 있도록 구성되어 있으니 차근차근 따라해 보시길 바래요.
+준비 작업 Python과 필요한 라이브러리 설치하기 우선 Python과 Scikit-learn, Pandas 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install pandas scikit-learn 데이터 준비 의료 데이터 분석을 위해서는 의료 데이터가 필요합니다.</description>
+    </item>
     <item>
       <title>Magenta로 AI 음악 생성하기: 초보자용 가이드</title>
       <link>https://funapps.site/posts/ai_music_generation_magenta_beginners_guide/</link>
