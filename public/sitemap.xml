@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://funapps.site/posts/</loc>
-    <lastmod>2024-07-26T09:53:11+12:00</lastmod>
+    <loc>https://funapps.site/posts/ai_autonomous_simulation/</loc>
+    <lastmod>2024-07-26T22:44:01+12:00</lastmod>
   </url><url>
-    <loc>https://funapps.site/posts/medical_data_analysis_python_scikit_learn/</loc>
-    <lastmod>2024-07-26T09:53:11+12:00</lastmod>
+    <loc>https://funapps.site/posts/</loc>
+    <lastmod>2024-07-26T22:44:01+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/</loc>
+    <lastmod>2024-07-26T22:44:01+12:00</lastmod>
+  </url><url>
+    <loc>https://funapps.site/posts/medical_data_analysis_python_scikit_learn/</loc>
     <lastmod>2024-07-26T09:53:11+12:00</lastmod>
   </url><url>
     <loc>https://funapps.site/posts/ai_music_generation_magenta_beginners_guide/</loc>

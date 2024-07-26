@@ -6,8 +6,17 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 26 Jul 2024 09:53:11 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2024 22:44:01 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 기반의 자율주행 시뮬레이션 만들기: 초보자 가이드</title>
+      <link>https://funapps.site/posts/ai_autonomous_simulation/</link>
+      <pubDate>Fri, 26 Jul 2024 22:44:01 +1200</pubDate>
+      <guid>https://funapps.site/posts/ai_autonomous_simulation/</guid>
+      <description>자율주행 기술은 현대 기술의 정점에 있으며, 많은 연구와 개발이 이루어지고 있습니다. 이번 글에서는 Python과 기계 학습을 사용하여 간단한 자율주행 시뮬레이션을 만드는 방법을 소개하겠습니다. 이 가이드는 초보자도 쉽게 따라할 수 있도록 구성되어 있습니다.
+준비 작업 Python과 필요한 라이브러리 설치하기 우선 Python과 몇 가지 주요 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install numpy pandas matplotlib scikit-learn gym 환경 설정 자율주행 시뮬레이션을 위해 OpenAI의 Gym 라이브러리를 사용합니다. Gym은 다양한 강화 학습 환경을 제공하는 도구입니다.</description>
+    </item>
     <item>
       <title>Python과 Scikit-learn으로 간단한 의료 데이터 분석</title>
       <link>https://funapps.site/posts/medical_data_analysis_python_scikit_learn/</link>
