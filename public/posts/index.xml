@@ -6,8 +6,17 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 26 Jul 2024 22:44:01 +1200</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jul 2024 20:16:38 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>텍스트 자동 완성 기능 구현: 자연어 처리 실습</title>
+      <link>https://funapps.site/posts/text_auto_generation/</link>
+      <pubDate>Sat, 27 Jul 2024 20:16:38 +1200</pubDate>
+      <guid>https://funapps.site/posts/text_auto_generation/</guid>
+      <description>텍스트 자동 완성 기능은 사용자가 입력하는 단어나 문장을 예측하여 자동으로 완성하는 기능입니다. 이번 글에서는 Python과 자연어 처리(NLP) 기술을 사용하여 간단한 텍스트 자동 완성 기능을 구현하는 방법을 소개하겠습니다. 이 가이드는 초보자도 쉽게 따라할 수 있도록 구성되어 있습니다.
+준비 작업 Python과 필요한 라이브러리 설치하기 우선 Python과 몇 가지 주요 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install numpy pandas tensorflow keras nltk 데이터 준비 텍스트 자동 완성 모델을 학습시키기 위해서는 대량의 텍스트 데이터가 필요합니다.</description>
+    </item>
     <item>
       <title>AI 기반의 자율주행 시뮬레이션 만들기: 초보자 가이드</title>
       <link>https://funapps.site/posts/ai_autonomous_simulation/</link>
