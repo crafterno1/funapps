@@ -3,7 +3,7 @@ title: "Python과 OpenCV를 이용한 실시간 객체 추적"
 keywords: ["Python", "OpenCV", "객체 추적", "컴퓨터 비전", "실시간"]
 date: "2024-07-29T12:59:01+12:00"
 cover:
-  image: "/images/ai13.webp"
+  image: "/images/ai15.webp"
   alt: "AI Deep Learning Model"
 ---
 
