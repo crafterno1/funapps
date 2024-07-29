@@ -6,14 +6,23 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 29 Jul 2024 12:59:01 +1200</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2024 23:03:50 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>강화학습으로 게임 캐릭터 행동 패턴 만들기: 기초 예제</title>
+      <link>https://funapps.site/posts/game_character_pattern/</link>
+      <pubDate>Mon, 29 Jul 2024 23:03:50 +1200</pubDate>
+      <guid>https://funapps.site/posts/game_character_pattern/</guid>
+      <description>강화학습(Reinforcement Learning)은 게임 개발에서 캐릭터의 행동 패턴을 학습시키는 데 매우 유용한 방법입니다. 이번 글에서는 간단한 예제를 통해서 강화학습을 사용하여 게임 캐릭터의 행동 패턴을 어떻게 만드는지 그 방법을 알아보도록 하겠습니다.
+준비 작업 Python과 필요한 라이브러리 설치하기 강화학습을 구현하기 위해 Python과 몇 가지 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install numpy gym stable-baselines3 강화학습 환경 설정 먼저 강화학습을 위한 환경을 설정합니다. 여기서는 OpenAI의 Gym 라이브러리를 사용하여 간단한 게임 환경을 설정하겠습니다:</description>
+    </item>
     <item>
       <title>Python과 OpenCV를 이용한 실시간 객체 추적</title>
       <link>https://funapps.site/posts/realtime_object_tracking/</link>
       <pubDate>Mon, 29 Jul 2024 12:59:01 +1200</pubDate>
       <guid>https://funapps.site/posts/realtime_object_tracking/</guid>
-      <description>Python과 OpenCV를 이용한 실시간 객체 추적 객체 추적은 컴퓨터 비전 분야에서 매우 중요한 기술 중 하나입니다. 이번 글에서는 Python과 OpenCV를 사용하여 실시간 객체 추적을 구현하는 방법을 소개하겠습니다. 이번 포스트는 초보자분들도 쉽게 따라하실 수 있도록 구성하였으니 천천히 따라해 보세요~
+      <description>객체 추적은 컴퓨터 비전 분야에서 매우 중요한 기술 중 하나입니다. 이번 글에서는 Python과 OpenCV를 사용하여 실시간 객체 추적을 구현하는 방법을 소개하겠습니다. 이번 포스트는 초보자분들도 쉽게 따라하실 수 있도록 구성하였으니 천천히 따라해 보세요~
 준비 작업 Python과 OpenCV 설치하기 우선 Python과 OpenCV 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
 pip install numpy opencv-python 객체 추적을 위한 동영상 스트림 설정 객체 추적을 위해 웹캠을 사용하여 실시간 동영상 스트림을 설정합니다:</description>
     </item>
