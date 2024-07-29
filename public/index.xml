@@ -6,8 +6,17 @@
     <description>Recent content on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 27 Jul 2024 20:16:38 +1200</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2024 12:59:01 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python과 OpenCV를 이용한 실시간 객체 추적</title>
+      <link>https://funapps.site/posts/realtime_object_tracking/</link>
+      <pubDate>Mon, 29 Jul 2024 12:59:01 +1200</pubDate>
+      <guid>https://funapps.site/posts/realtime_object_tracking/</guid>
+      <description>Python과 OpenCV를 이용한 실시간 객체 추적 객체 추적은 컴퓨터 비전 분야에서 매우 중요한 기술 중 하나입니다. 이번 글에서는 Python과 OpenCV를 사용하여 실시간 객체 추적을 구현하는 방법을 소개하겠습니다. 이번 포스트는 초보자분들도 쉽게 따라하실 수 있도록 구성하였으니 천천히 따라해 보세요~
+준비 작업 Python과 OpenCV 설치하기 우선 Python과 OpenCV 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install numpy opencv-python 객체 추적을 위한 동영상 스트림 설정 객체 추적을 위해 웹캠을 사용하여 실시간 동영상 스트림을 설정합니다:</description>
+    </item>
     <item>
       <title>텍스트 자동 완성 기능 구현: 자연어 처리 실습</title>
       <link>https://funapps.site/posts/text_auto_generation/</link>
