@@ -6,8 +6,16 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 29 Jul 2024 23:03:50 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2024 14:28:26 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>딥러닝을 활용한 간단한 감정 분석 프로그램 만들기</title>
+      <link>https://funapps.site/posts/ai_emotion_analysis/</link>
+      <pubDate>Fri, 02 Aug 2024 14:28:26 +1200</pubDate>
+      <guid>https://funapps.site/posts/ai_emotion_analysis/</guid>
+      <description>이번 글에서는 딥러닝을 사용하여 간단한 감정 분석 프로그램을 만드는 방법을 소개하게 하도록 하겠습니다. 감정 분석(Sentiment Analysis)은 텍스트 데이터에서 긍정, 부정, 중립과 같은 감정을 분석하는 기술이며 앞으로 다가올 휴머노이드 시대에 꼭 필요한 기반 기술입니다. 이 가이드는 초보자도 쉽게 따라할 수 있도록 구성되어 있으니 천천히 따라해 보시면서 익히시길 바랍니다.
+준비 작업 Python과 필요한 라이브러리 설치하기 감정 분석을 구현하기 위해서는 Python과 몇 가지 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치하세요 :</description>
+    </item>
     <item>
       <title>강화학습으로 게임 캐릭터 행동 패턴 만들기: 기초 예제</title>
       <link>https://funapps.site/posts/game_character_pattern/</link>
