@@ -23,6 +23,9 @@ outputs:
     - JSON # necessary for search
 
 params:
+  homeInfoParams:
+    Title: 펀앱스 : AI 정보 블로그
+    Content: 인공지능을 처음 접하는 분들을 위해 단계별로 쉽고 자세하게 설명하는 블로그입니다. AI의 기본 개념부터 실생활 활용까지, 누구나 이해할 수 있도록 친절하게 안내합니다
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
   comments: true
@@ -33,5 +36,3 @@ params:
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
-  cover:
-    hiddenInList: true
