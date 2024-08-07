@@ -6,8 +6,17 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 02 Aug 2024 14:28:26 +1200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 22:57:46 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python으로 손글씨 인식 프로그램 만들기: 딥러닝 예제</title>
+      <link>https://funapps.site/posts/ai_hand_writing_recognition/</link>
+      <pubDate>Wed, 07 Aug 2024 22:57:46 +1200</pubDate>
+      <guid>https://funapps.site/posts/ai_hand_writing_recognition/</guid>
+      <description>이번 글에서는 딥러닝을 사용하여 손글씨 인식 프로그램을 만드는 방법을 소개하도록 하겠습니다. 손글씨 인식은 텍스트를 이미지로부터 인식하여 디지털 텍스트로 변환하는 기술이며 OCR 등으로도 불립니다. 쉽게 따라할 수 있도록 구성하였으니 천천히 같이 구현해 보시면서 공부해 보시기 바랍니다.
+준비 작업 Python과 필요한 라이브러리 설치하기 손글씨 인식을 구현하기 위해선 우선 Python과 몇 가지 라이브러리를 설치해야 합니다. 다음 명령어를 사용하여 필요한 패키지를 설치할 수 있습니다:
+pip install numpy tensorflow matplotlib **NumPy: 과학 계산을 위한 라이브러리 **TensorFlow: 딥러닝 모델을 위한 라이브러리 **Matplotlib: 데이터 시각화를 위한 라이브러리</description>
+    </item>
     <item>
       <title>딥러닝을 활용한 간단한 감정 분석 프로그램 만들기</title>
       <link>https://funapps.site/posts/ai_emotion_analysis/</link>
