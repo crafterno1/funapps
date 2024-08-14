@@ -6,8 +6,16 @@
     <description>Recent content in Posts on 펀앱스</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 08 Aug 2024 12:02:51 +1200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2024 12:50:38 +1200</lastBuildDate>
     <atom:link href="https://funapps.site/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>딥러닝과 신경망의 구조와 작동 방식</title>
+      <link>https://funapps.site/posts/ai_deep_learning_brain/</link>
+      <pubDate>Wed, 14 Aug 2024 12:50:38 +1200</pubDate>
+      <guid>https://funapps.site/posts/ai_deep_learning_brain/</guid>
+      <description>딥러닝(Deep Learning)은 현대 인공지능(AI)의 핵심 기술 중 하나로, 복잡한 데이터를 분석하고 처리하는 능력으로 주목받고 있습니다. 이 기술의 중심에는 **신경망(Neural Network)**이 있으며, 신경망의 구조와 작동 방식이 딥러닝의 성능을 좌우합니다. 이번 블로그 글에서는 딥러닝의 기본 개념과 신경망의 구조 및 작동 방식을 살펴보고, 몇 가지 예시를 통해 이해를 돕고자 합니다.
+딥러닝이란? 딥러닝은 인공 신경망을 기반으로 한 머신 러닝의 한 종류입니다. 이름에서 알 수 있듯이, &amp;lsquo;깊다(deep)&amp;lsquo;는 의미는 신경망의 층(layer)이 여러 겹으로 구성되어 있음을 나타냅니다. 이 다층 신경망(Deep Neural Network)은 단순한 데이터를 입력받아 복잡한 문제를 해결할 수 있는 능력을 가집니다.</description>
+    </item>
     <item>
       <title>머신 러닝과 딥러닝의 차이점</title>
       <link>https://funapps.site/posts/difference_between_ml_and_dl/</link>
